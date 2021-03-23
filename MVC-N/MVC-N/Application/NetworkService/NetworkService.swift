@@ -8,20 +8,25 @@
 
 import Foundation
 
+//общий менеджер, который не имеет представления, по какому адресу ему нужно обращаться
 class NetworkService {
     private init() {}
     static let shared = NetworkService()
     
     //метод для получения данных
-    public func getData(completion: @escaping (Any) -> ()){
+    public func getData(url: URL, completion: @escaping (Any) -> ()){
         let session = URLSession.shared
-        session.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/posts/1/comments")!) { (data, response, error) in
+        //получение данных
+        session.dataTask(with: url) { (data, response, error) in
             //проверка, получены ли данные
             guard let  data = data else { return }
             
             do {
+                //получение  JSON 
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
+                DispatchQueue.main.async {
+                    completion(json)
+                }
             } catch {
                print(error)
             }
