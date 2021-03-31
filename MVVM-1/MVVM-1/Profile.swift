@@ -3,7 +3,7 @@
 //  MVVM-1
 //
 //  Created by Lolita Chernyheva on 27/03/2021.
-//  Copyright © 2021 Ivan Akulov. All rights reserved.
+//  Copyright © 2021 Lolita Chernyheva. All rights reserved.
 //
 
 import Foundation

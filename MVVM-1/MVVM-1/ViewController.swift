@@ -3,7 +3,7 @@
 //  MVVM-1
 //
 //  Created by Lolita Chernyheva on 27/03/2021.
-//  Copyright © 2021 Ivan Akulov. All rights reserved.
+//  Copyright © 2021 Lolita Chernyheva. All rights reserved.
 //
 
 import UIKit
@@ -14,20 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondNameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     
-    var profile: Profile? {
+    var viewModel: ViewModel = ViewModel() {
         didSet {
-            guard let profile = profile else { return }
+            self.nameLabel.text = viewModel.name
+            self.secondNameLabel.text = viewModel.secondName
+            self.ageLabel.text = viewModel.age
             
-            self.nameLabel.text = profile.name
-            self.secondNameLabel.text = profile.secondName
-            self.ageLabel.text = "\(profile.age)"
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        profile = Profile(name: "John", secondName: "Smith", age: 33)
     }
 
     override func didReceiveMemoryWarning() {
