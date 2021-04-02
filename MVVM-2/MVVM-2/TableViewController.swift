@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var profiles: [Profile]
+    var profiles: [Profile] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
-        guard let profilesCount = profiles.count else {
-            return 0
-        }
-        return profilesCount
+        return profiles.count
     }
     
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
