@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		D33F17252615DA65005F18D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F17242615DA65005F18D8 /* AppDelegate.swift */; };
 		D33F17272615DA65005F18D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F17262615DA65005F18D8 /* SceneDelegate.swift */; };
-		D33F17292615DA65005F18D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F17282615DA65005F18D8 /* ViewController.swift */; };
 		D33F172C2615DA65005F18D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33F172A2615DA65005F18D8 /* Main.storyboard */; };
 		D33F172E2615DA70005F18D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33F172D2615DA70005F18D8 /* Assets.xcassets */; };
 		D33F17312615DA70005F18D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33F172F2615DA70005F18D8 /* LaunchScreen.storyboard */; };
 		D33F173C2615DA71005F18D8 /* MVVM_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33F173B2615DA71005F18D8 /* MVVM_2Tests.swift */; };
+		D3A1B45526160631000B59E7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A1B45426160631000B59E7 /* TableViewController.swift */; };
+		D3A1B457261606D2000B59E7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A1B456261606D2000B59E7 /* Profile.swift */; };
+		D3A1B45926162755000B59E7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A1B45826162755000B59E7 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,6 @@
 		D33F17212615DA65005F18D8 /* MVVM-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33F17242615DA65005F18D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D33F17262615DA65005F18D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D33F17282615DA65005F18D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D33F172B2615DA65005F18D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D33F172D2615DA70005F18D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D33F17302615DA70005F18D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +39,9 @@
 		D33F17372615DA71005F18D8 /* MVVM-2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D33F173B2615DA71005F18D8 /* MVVM_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_2Tests.swift; sourceTree = "<group>"; };
 		D33F173D2615DA71005F18D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A1B45426160631000B59E7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		D3A1B456261606D2000B59E7 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		D3A1B45826162755000B59E7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 			children = (
 				D33F17242615DA65005F18D8 /* AppDelegate.swift */,
 				D33F17262615DA65005F18D8 /* SceneDelegate.swift */,
-				D33F17282615DA65005F18D8 /* ViewController.swift */,
+				D3A1B45426160631000B59E7 /* TableViewController.swift */,
+				D3A1B45A26162895000B59E7 /* Model */,
+				D3A1B45B261628AA000B59E7 /* View */,
 				D33F172A2615DA65005F18D8 /* Main.storyboard */,
 				D33F172D2615DA70005F18D8 /* Assets.xcassets */,
 				D33F172F2615DA70005F18D8 /* LaunchScreen.storyboard */,
@@ -97,6 +103,22 @@
 				D33F173D2615DA71005F18D8 /* Info.plist */,
 			);
 			path = "MVVM-2Tests";
+			sourceTree = "<group>";
+		};
+		D3A1B45A26162895000B59E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3A1B456261606D2000B59E7 /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3A1B45B261628AA000B59E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3A1B45826162755000B59E7 /* TableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D33F17292615DA65005F18D8 /* ViewController.swift in Sources */,
+				D3A1B45926162755000B59E7 /* TableViewCell.swift in Sources */,
 				D33F17252615DA65005F18D8 /* AppDelegate.swift in Sources */,
+				D3A1B457261606D2000B59E7 /* Profile.swift in Sources */,
+				D3A1B45526160631000B59E7 /* TableViewController.swift in Sources */,
 				D33F17272615DA65005F18D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
