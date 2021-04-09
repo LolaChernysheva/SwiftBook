@@ -10,16 +10,14 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    var profiles: [Profile] = []
+    var viewModel: ViewModel?
+    // var profiles: [Profile] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = ViewModel()
         
-        profiles = [
-            Profile(name: "John", secondName: "Watson", age: 33),
-            Profile(name: "Sherlock", secondName: "Holmes", age: 35),
-            Profile(name: "Eliza", secondName: "Bennet", age: 26)
-        ]
+
     }
     
     // MARK: - Table view data source
